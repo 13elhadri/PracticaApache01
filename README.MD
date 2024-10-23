@@ -172,27 +172,34 @@ apache2ctl -D FOREGROUND
 
 ## Ejecución
 
-![docker-compose-up](imagenes/docker-up.png)
-
 Lanzamos el `docker-compose up`.
 
-![docker-mounts](imagenes/docker-mounts.png)
+![docker-compose-up](imagenes/docker-up.png)
+
+
 
 Comprobamos desde Docker Desktop y vemos los directorios nuevos del contenedor y el origen, es decir, lo que hemos puesto en `volumes` en el `docker-compose`.
 
+![docker-mounts](imagenes/docker-mounts.png)
+
+
+
+Comprobamos que yahya.com funciona y que la conexion no segura.
+
 ![yahya.com](imagenes/yahya.png)
 
-Comprobamos que yahya.com funciona.
+
+
+Comprobamos que elhadri.com funciona y que la conexion no segura.
 
 ![elhadri.com](imagenes/elhadri-fun.png)
 
-Comprobamos que elhadri.com funciona.
 
-![seguro.net](imagenes/seguro-fun.png)
 
 Comprobamos que seguro.net funciona y nos recoge también nuestro certificado.
 
-![certificado](imagenes/cert-fun.png)
+![seguro.net](imagenes/seguro-fun.png) ![certificado](imagenes/cert-fun.png)
+
 
 
 Comprobamos que seguro.net/secreto funciona y nos pide iniciar sesión con nuestro usuario y contraseña. Y funciona.
