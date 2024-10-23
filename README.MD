@@ -27,6 +27,7 @@ Hemos hecho el despliegue de tres dominios diferentes utilizando un servidor Apa
 ## Configuración por defecto
 
 ![default](imagenes/default.png)
+
 Antes de empezar, tenemos que tener la configuración por defecto de nuestro servidor Apache, a la cual le añadimos en la carpeta `conf` los puertos y el `apache2.conf`. También añadimos en `sites-available` el `000-default.conf`, que sería el primero que nos coge en caso de que no encuentre una configuración, ya que empieza por `000`. También añadimos el `default-ssl`, ya que vamos a utilizar SSL. Y por último, añadimos al sitio web una página HTML por defecto.
 
 ## yahya.com
@@ -101,9 +102,9 @@ Comprobamos que seguro.net funciona y nos recoge también nuestro certificado.
 
 ![certificado](imagenes/cert-fun.png)
 
-![secreto](imagenes/user-fun.png)
-Comprobamos que seguro.net/secreto funciona y nos pide iniciar sesión con nuestro usuario y contraseña. Y funciona.
 
+Comprobamos que seguro.net/secreto funciona y nos pide iniciar sesión con nuestro usuario y contraseña. Y funciona.
+![secreto](imagenes/user-fun.png)
 ![secreto](imagenes/secreto-fun.png)
 
 
