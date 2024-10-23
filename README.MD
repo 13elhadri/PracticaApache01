@@ -72,6 +72,7 @@ El último paso, antes del `docker-compose`, es cambiar nuestros hosts y añadir
 ## Docker-compose
 
 ![docker](imagenes/docker-compose.png)
+
 En el Docker, creamos nuestro servicio web, le indicamos nuestra imagen que vamos a utilizar. Le damos el nombre del contenedor, mapeamos los puertos, que son el del Apache y el del SSL. Indicamos también qué directorios queremos copiar y dónde los queremos. Y por último, ejecutamos nuestro script siempre que inicie el contenedor.
 
 ![script](imagenes/script.png)
@@ -79,18 +80,23 @@ En el Docker, creamos nuestro servicio web, le indicamos nuestra imagen que vamo
 ## Ejecución
 
 ![docker-compose-up](imagenes/docker-up.png)
+
 Lanzamos el `docker-compose up`.
 
 ![docker-mounts](imagenes/docker-mounts.png)
+
 Comprobamos desde Docker Desktop y vemos los directorios nuevos del contenedor y el origen, es decir, lo que hemos puesto en `volumes` en el `docker-compose`.
 
 ![yahya.com](imagenes/yahya.png)
+
 Comprobamos que yahya.com funciona.
 
 ![elhadri.com](imagenes/elhadri-fun.png)
+
 Comprobamos que elhadri.com funciona.
 
 ![seguro.net](imagenes/seguro-fun.png)
+
 Comprobamos que seguro.net funciona y nos recoge también nuestro certificado.
 
 ![certificado](imagenes/cert-fun.png)
