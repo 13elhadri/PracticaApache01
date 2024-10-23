@@ -75,10 +75,11 @@ Para seguro.net, son los mismos pasos que las otras dos. Añadimos nuestros HTML
 ![seguro.net](imagenes/seguro.png)
 
 
+Para tener nuestra conexión segura, necesitamos tener nuestros certificados, los cuales tenemos que generar con este comando. Una vez los genera, nos los deja automáticamente en C. Nosotros tenemos que copiarlos a nuestra carpeta de `certs` en nuestro proyecto.
+
 ```
     openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout seguro.key -out seguro.crt
 ```
-Para tener nuestra conexión segura, necesitamos tener nuestros certificados, los cuales tenemos que generar con este comando. Una vez los genera, nos los deja automáticamente en C. Nosotros tenemos que copiarlos a nuestra carpeta de `certs` en nuestro proyecto.
 
 Para poder añadir estos certificados a nuestro Virtual Host, tenemos que añadir las líneas de `SSLEngine On` e indicarle dónde están nuestros certificados.
 ```
@@ -107,12 +108,12 @@ Nos queda el último paso, que es añadir nuestra página secreta, la cual quere
 ![seguro.net/secreto](imagenes/secreto.png)
 
 
+Este es el comando que necesitamos para crear nuestra contraseña. Yo lo tengo creado en mi directorio personal y luego lo corto y lo pego en el del proyecto porque me daba problemas al hacerlo directamente en mi proyecto.
+
 ```
     htpasswd -c C:\Users\anasm\.htpasswd yahya
 
 ```
-
-Este es el comando que necesitamos para crear nuestra contraseña. Yo lo tengo creado en mi directorio personal y luego lo corto y lo pego en el del proyecto porque me daba problemas al hacerlo directamente en mi proyecto.
 
 ![pass](imagenes/comando-pass.png)
 
