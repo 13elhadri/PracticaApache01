@@ -65,6 +65,7 @@ Este es el comando que necesitamos para crear nuestra contraseña. Yo lo tengo c
 ## Hosts
 
 ![hosts](imagenes/hosts.png)
+
 El último paso, antes del `docker-compose`, es cambiar nuestros hosts y añadir los nuevos dominios.
 
 ## Docker-compose
