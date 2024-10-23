@@ -198,7 +198,7 @@ Comprobamos que elhadri.com funciona y que la conexion no segura.
 
 Comprobamos que seguro.net funciona y nos recoge también nuestro certificado.
 
-<img src="imagenes/seguro-fun.png" alt="seguro.net" width="300"><img src="imagenes/cert-fun.png" alt="certificado" width="300">
+<img src="imagenes/seguro-fun.png" alt="seguro.net" width="300"> <img src="imagenes/cert-fun.png" alt="certificado" width="300">
 
 
 
