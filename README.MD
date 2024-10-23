@@ -28,7 +28,7 @@ Hemos hecho el despliegue de tres dominios diferentes utilizando un servidor Apa
 
 Antes de empezar, tenemos que tener la configuración por defecto de nuestro servidor Apache, a la cual le añadimos en la carpeta `conf` los puertos y el `apache2.conf`. También añadimos en `sites-available` el `000-default.conf`, que sería el primero que nos coge en caso de que no encuentre una configuración, ya que empieza por `000`. También añadimos el `default-ssl`, ya que vamos a utilizar SSL. Y por último, añadimos al sitio web una página HTML por defecto.
 
-![default](imagenes/default.png)
+<img src="imagenes/default.png" alt="default" width="300">
 
 ## yahya.com
 
@@ -46,7 +46,7 @@ Una vez tenemos nuestro dominio en `website`, vamos a la carpeta de `sites-avail
 
 </VirtualHost>
 ```
-![yahya.com](imagenes/yahya-com.png)
+<img src="imagenes/yahya-com.png" alt="yahya.com" width="300">
 
 ## www.elhadri.com
 
@@ -66,13 +66,14 @@ Una vez tenemos nuestro dominio en `website`, vamos a la carpeta de `sites-avail
 </VirtualHost>
 ```
 
-![www.elhadri.com](imagenes/elhadri.png)
+<img src="imagenes/elhadri.png" alt="www.elhadri.com" width="300">
+
 
 ## seguro.net
 
 Para seguro.net, son los mismos pasos que las otras dos. Añadimos nuestros HTML a `website` y, en nuestro Virtual Host, tenemos que hacerle como un mapeo para que, en caso de que nos entre por el puerto 80, lo redirijamos al 443, que es el que nos interesa, ya que es el de una conexión segura con SSL.
 
-![seguro.net](imagenes/seguro.png)
+<img src="imagenes/seguro.png" alt="seguro.net" width="300">
 
 
 Para tener nuestra conexión segura, necesitamos tener nuestros certificados, los cuales tenemos que generar con este comando. Una vez los genera, nos los deja automáticamente en C. Nosotros tenemos que copiarlos a nuestra carpeta de `certs` en nuestro proyecto.
@@ -89,7 +90,7 @@ Para poder añadir estos certificados a nuestro Virtual Host, tenemos que añadi
     
 ```
 
-![ssl](imagenes/ssl.png)
+<img src="imagenes/ssl.png" alt="ssl" width="300">
 
 ## seguro.net/secreto
 Nos queda el último paso, que es añadir nuestra página secreta, la cual queremos que tenga un usuario y contraseña. Para ello, añadimos nuestro HTML y nos vamos al `conf` de nuestro dominio que es seguro.net. En el Virtual Host, añadimos las líneas de donde queremos que sea obligatorio que el usuario esté previamente registrado para poder acceder a la página. Esa contraseña tiene que estar cifrada, porque si no, cualquiera podría acceder.
@@ -105,7 +106,7 @@ Nos queda el último paso, que es añadir nuestra página secreta, la cual quere
 
 ```
 
-![seguro.net/secreto](imagenes/secreto.png)
+<img src="imagenes/secreto.png" alt="seguro.net/secreto" width="300">
 
 
 Este es el comando que necesitamos para crear nuestra contraseña. Yo lo tengo creado en mi directorio personal y luego lo corto y lo pego en el del proyecto porque me daba problemas al hacerlo directamente en mi proyecto.
@@ -115,14 +116,15 @@ Este es el comando que necesitamos para crear nuestra contraseña. Yo lo tengo c
 
 ```
 
-![pass](imagenes/comando-pass.png)
+<img src="imagenes/comando-pass.png" alt="comando-pass" width="300">
 
 ## Hosts
 
 El último paso, antes del `docker-compose`, es cambiar nuestros hosts y añadir los nuevos dominios.
 
 
-![hosts](imagenes/hosts.png)
+<img src="imagenes/hosts.png" alt="hosts" width="300">
+
 
 ## Docker-compose
 
@@ -174,25 +176,25 @@ apache2ctl -D FOREGROUND
 
 Lanzamos el `docker-compose up`.
 
-![docker-compose-up](imagenes/docker-up.png)
+<img src="imagenes/docker-up.png" alt="docker-compose-up" width="300">
 
 
 
 Comprobamos desde Docker Desktop y vemos los directorios nuevos del contenedor y el origen, es decir, lo que hemos puesto en `volumes` en el `docker-compose`.
 
-![docker-mounts](imagenes/docker-mounts.png)
+<img src="imagenes/docker-mounts.png" alt="docker-mounts" width="300">
 
 
 
 Comprobamos que yahya.com funciona y que la conexion no segura.
 
-![yahya.com](imagenes/yahya.png)
+<img src="imagenes/yahya.png" alt="yahya.com" width="300">
 
 
 
 Comprobamos que elhadri.com funciona y que la conexion no segura.
 
-![elhadri.com](imagenes/elhadri-fun.png)
+<img src="imagenes/elhadri-fun.png" alt="elhadri.com" width="300">
 
 
 
@@ -203,8 +205,7 @@ Comprobamos que seguro.net funciona y nos recoge también nuestro certificado.
 
 
 Comprobamos que seguro.net/secreto funciona y nos pide iniciar sesión con nuestro usuario y contraseña. Y funciona.
-![secreto](imagenes/user-fun.png)
-![secreto](imagenes/secreto-fun.png)
+<img src="imagenes/user-fun.png" alt="secreto" width="300"> <img src="imagenes/secreto-fun.png" alt="secreto" width="300">
 
 
 
