@@ -1,0 +1,17 @@
+services:
+  web:
+    image: ubuntu/apache2 
+    container_name: apache_yahya 
+    ports:
+      - "80:80" 
+      - "443:443" 
+    volumes:
+      - ./conf/apache2.conf:/etc/apache2/apache2.conf 
+      - ./conf/ports.conf:/etc/apache2/ports.conf 
+      - ./sites-available:/etc/apache2/sites-available 
+      - ./website:/var/www/html/ 
+      - ./scripts:/scripts 
+      - ./htpasswd/.htpasswd:/etc/apache2/.htpasswd 
+      - ./certs:/etc/apache2/certs 
+    restart: always
+    entrypoint: /scripts/entrypoint.sh 
