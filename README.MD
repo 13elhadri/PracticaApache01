@@ -46,7 +46,7 @@ Una vez tenemos nuestro dominio en `website`, vamos a la carpeta de `sites-avail
 
 </VirtualHost>
 ```
-<img src="imagenes/yahya-com.png" alt="yahya.com" width="500">
+![yahya.com](imagenes/yahya-com.png)
 
 ## www.elhadri.com
 
@@ -66,14 +66,14 @@ Una vez tenemos nuestro dominio en `website`, vamos a la carpeta de `sites-avail
 </VirtualHost>
 ```
 
-<img src="imagenes/elhadri.png" alt="www.elhadri.com" width="500">
+![www.elhadri.com](imagenes/elhadri.png)
 
 
 ## seguro.net
 
 Para seguro.net, son los mismos pasos que las otras dos. Añadimos nuestros HTML a `website` y, en nuestro Virtual Host, tenemos que hacerle como un mapeo para que, en caso de que nos entre por el puerto 80, lo redirijamos al 443, que es el que nos interesa, ya que es el de una conexión segura con SSL.
 
-<img src="imagenes/seguro.png" alt="seguro.net" width="500">
+![seguro.net](imagenes/seguro.png)
 
 
 Para tener nuestra conexión segura, necesitamos tener nuestros certificados, los cuales tenemos que generar con este comando. Una vez los genera, nos los deja automáticamente en C. Nosotros tenemos que copiarlos a nuestra carpeta de `certs` en nuestro proyecto.
@@ -90,7 +90,7 @@ Para poder añadir estos certificados a nuestro Virtual Host, tenemos que añadi
     
 ```
 
-<img src="imagenes/ssl.png" alt="ssl" width="500">
+![ssl](imagenes/ssl.png)
 
 ## seguro.net/secreto
 Nos queda el último paso, que es añadir nuestra página secreta, la cual queremos que tenga un usuario y contraseña. Para ello, añadimos nuestro HTML y nos vamos al `conf` de nuestro dominio que es seguro.net. En el Virtual Host, añadimos las líneas de donde queremos que sea obligatorio que el usuario esté previamente registrado para poder acceder a la página. Esa contraseña tiene que estar cifrada, porque si no, cualquiera podría acceder.
@@ -106,7 +106,7 @@ Nos queda el último paso, que es añadir nuestra página secreta, la cual quere
 
 ```
 
-<img src="imagenes/secreto.png" alt="seguro.net/secreto" width="500">
+![seguro.net/secreto](imagenes/secreto.png)
 
 
 Este es el comando que necesitamos para crear nuestra contraseña. Yo lo tengo creado en mi directorio personal y luego lo corto y lo pego en el del proyecto porque me daba problemas al hacerlo directamente en mi proyecto.
@@ -116,14 +116,14 @@ Este es el comando que necesitamos para crear nuestra contraseña. Yo lo tengo c
 
 ```
 
-<img src="imagenes/comando-pass.png" alt="comando-pass" width="500">
+![pass](imagenes/comando-pass.png)
 
 ## Hosts
 
 El último paso, antes del `docker-compose`, es cambiar nuestros hosts y añadir los nuevos dominios.
 
 
-<img src="imagenes/hosts.png" alt="hosts" width="500">
+![hosts](imagenes/hosts.png)
 
 
 ## Docker-compose
@@ -182,7 +182,7 @@ Lanzamos el `docker-compose up`.
 
 Comprobamos desde Docker Desktop y vemos los directorios nuevos del contenedor y el origen, es decir, lo que hemos puesto en `volumes` en el `docker-compose`.
 
-<img src="imagenes/docker-mounts.png" alt="docker-mounts" width="500">
+<img src="imagenes/docker-mounts.png" alt="docker-mounts" width="700">
 
 
 
